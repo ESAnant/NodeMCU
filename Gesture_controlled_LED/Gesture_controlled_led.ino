@@ -1,8 +1,7 @@
 int ledPin = 13; // choose pin for the LED
 int inputPin = 16; // choose input pin (for Infrared sensor) 
 int val = 0; // variable for reading the pin status
-int led=0;
-int count=1;
+int led=0;// variable for LED state
 void setup() 
 { 
    pinMode(ledPin, OUTPUT); // declare LED as output 
@@ -14,19 +13,18 @@ void loop()
 { 
    val = digitalRead(inputPin); // read input value 
  
-   if (val == LOW)
+   if (val == LOW)// object detected
    {  
-      if (led==1)
+      if (led==1)// if led state-on
       {
-        digitalWrite(ledPin,LOW);
-        led=0;
+        digitalWrite(ledPin,LOW);// turn led off
+        led=0;// set led state-off
       }
       else
       {
-        digitalWrite(ledPin,HIGH);
-        led=1;
+        digitalWrite(ledPin,HIGH);// turn led on
+        led=1;// set led state-on
         
       }
    }
-    Serial.println(count);
 }
