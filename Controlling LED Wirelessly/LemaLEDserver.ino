@@ -1,7 +1,7 @@
 //https://github.com/esp8266/ESPWebServer
 #include <ESP8266WebServer.h>//Download this library from the link above which helps convert NodeMCU into a server
 const char username[]="username";//Give any username(SSID) to the NodeMCU
-const char password[]="03052001";//Give any password(password) to the NodeMCU
+const char password[]="password";//Give any password(password) to the NodeMCU
 ESP8266WebServer server;//name the server
 void setup() {
   pinMode(16,OUTPUT);//Set pinmode for LED
@@ -24,7 +24,7 @@ void led()
 {
   //myHTML contains the HTML code of the website with buttons that represent the state of the LED.
   //This code can be edited according to the application and need of the user.
-  String myhtml="<html><head><title>LemaNode Webserver</title></head><body style=\"background-color: cyan\"><h1><center>IOT LED</center></h1><form><center><button type=\"submit\" name=\"state\" value=\"0\">LED ON</button></center><center><button type=\"submit\" name=\"state\" value=\"1\">LED OFF</button></center></form></body></html>";
+  String myhtml="<html><head><title>Webserver</title></head><body style=\"background-color: cyan\"><h1><center>IOT LED</center></h1><form><center><button type=\"submit\" name=\"state\" value=\"0\">LED ON</button></center><center><button type=\"submit\" name=\"state\" value=\"1\">LED OFF</button></center></form></body></html>";
   if (server.arg("state")=="0")//State of the LED
   {
   digitalWrite(16,LOW);//For Common Anode LED it turns on and off for Common Cathode
