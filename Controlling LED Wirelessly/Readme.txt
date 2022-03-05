@@ -1,4 +1,4 @@
-This is a project which transforms the NodeMCU into a server throught which one can control different actuators and sensors.
+This is a project which transforms the NodeMCU into a server through which one can control different actuators and sensors.
 
 This code utilises HTML website to control a LED wirelessly over a LAN connection to the NodeMCU.
 This website can be used only if the client,device you want to connect the server to wirelessly, is connected to the network of the server.
