@@ -11,7 +11,7 @@
 #define key       "aio_xxxx"//Adafruit account key you can find these in the site
 WiFiClient esp;//set the name of client
 Adafruit_MQTT_Client mqtt(&esp,server,port,user,key);//Set the mqtt client
-Adafruit_MQTT_Publish feed(&mqtt,user"/feeds/lemaldr");//Set the process to publish the data
+Adafruit_MQTT_Publish feed(&mqtt,user"/feeds/ldr");//Set the process to publish the data with the mqtt protocal and the extension of the feed that you have created
 void setup() {
   // put your setup code here, to run once:
   pinMode(A0,INPUT);//Connect the LDR signal pin to A0
